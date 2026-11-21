@@ -17,6 +17,10 @@ The four stories, all on the table:
 
 A stone plaque on the front of the table is dated 21 NOV 2026, so the image itself says which day it sums up.
 
+## Why this painting
+
+A news front page would list the stories; a painting makes them felt in one glance. The Last Supper is a scene everyone recognises, so the viewer reads it instantly: a shared table, a calm centre, and trouble all around. Each object on the table is a headline you can point at, and the warm gold bottle is the one hopeful note in a dark day — the story the eye lands on last.
+
 ## Run it
 
 ```sh

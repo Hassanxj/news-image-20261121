@@ -32,6 +32,11 @@ def main() -> None:
     src = HERE / "entry.png"
     assert src.is_file(), "entry.png is missing"
     assert src.stat().st_size < 1024 * 1024, "entry.png is over 1 MiB"
+    # Read the first bytes and check the PNG signature, so a wrong
+    # file can never be submitted as the entry by accident.
+    with src.open("rb") as handle:
+        signature = handle.read(8)
+    assert signature == b"\x89PNG\r\n\x1a\n", "entry.png is not a PNG"
     out = Path("/output/entry.png")
     out.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(src, out)
